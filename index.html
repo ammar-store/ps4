@@ -10,40 +10,31 @@
     <link rel="stylesheet" href="style.css">
 
     <style>
+        html {
+            min-height: 100%;
+        }
+
         body {
-            background-image: url("Background.png");
-            background-size: cover;
-            background-position: center center;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
+            min-height: 100vh;
+            background: #111 url("./Background.png") center center / cover no-repeat fixed !important;
         }
 
         #msgs {
             text-align: center;
         }
 
-        #menu, #crypto {
+        #menu {
             text-align: center;
-        }
-
-        #crypto {
-            display: none;
-        }
-
-        .btn-multi {
-            margin: 5px;
-        }
-
-        .btn-onln {
-            margin-top: 137px;
-            margin-bottom: 77px;
-            width: min(468px, 95%);
         }
 
         .brand {
             color: #f31414;
             margin-left: 10px;
             margin-right: 10px;
+        }
+
+        .footer-title {
+            margin-top: 78px;
         }
     </style>
 </head>
@@ -125,53 +116,11 @@
             Restore Host
         </button>
 
-        <br>
-
-        <button
-            class="btn btn-onln"
-            onmouseover="setMessage('Support Ammar Store with a donation')"
-            onmouseout="resetMessage()"
-            onclick="donations()">
-            For Donations (Only in Cryptocurrencies)
-        </button>
-
-        <h1 style="margin-top: 78px;">
+        <h1 class="footer-title">
             Designed by:
             <span class="brand">Ammar Store</span>
             A special thanks to all the devs on the scene.
         </h1>
-
-    </div>
-
-    <div id="crypto">
-
-        <h1 style="font-size: 18px; color: yellow;">
-            Donate with Bitcoin (BTC):
-        </h1>
-
-        <img src="btc.jpg" width="150" height="150" alt="Bitcoin QR Code">
-
-        <br>
-
-        <h1 style="font-size: 18px;">
-            bc1q6cnsykmvem6zgw8wag3ygee0jkhtxj6rkp2nrm
-        </h1>
-
-        <br>
-
-        <h1 style="font-size: 18px; color: yellow;">
-            Donate with Ethereum (ETH):
-        </h1>
-
-        <img src="eth.jpg" width="150" height="150" alt="Ethereum QR Code">
-
-        <h1 style="font-size: 18px;">
-            0x7Ae1825ddE196925dB8B7832F436cA0eAeaF932c
-        </h1>
-
-        <button class="btn" onclick="load_menu()">
-            Return
-        </button>
 
     </div>
 
@@ -185,17 +134,6 @@
 
         function resetMessage() {
             msgs.textContent = defaultTitle;
-        }
-
-        function donations() {
-            document.getElementById('crypto').style.display = 'block';
-            document.getElementById('menu').style.display = 'none';
-        }
-
-        function load_menu() {
-            document.getElementById('menu').style.display = 'block';
-            document.getElementById('crypto').style.display = 'none';
-            resetMessage();
         }
     </script>
 

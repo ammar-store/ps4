@@ -6,8 +6,8 @@ html {
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background-color: #24272b;
-    color: white;
+    background-color: #050B18;
+    color: #FFFFFF;
     text-align: center;
     overflow-x: hidden;
 }
@@ -16,18 +16,22 @@ body {
     min-height: 100vh;
     margin: 0;
     background: transparent;
-    color: white;
+    color: #FFFFFF;
     text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 h1 {
-    text-shadow: 0.1em 0.1em 0.2em black;
+    text-shadow:
+        0 0 8px rgba(0, 119, 255, 0.7),
+        2px 2px 5px #000000;
     font-size: 25px;
-    color: white;
+    color: #FFFFFF;
 }
 
 a {
     text-decoration: none;
+    color: inherit;
 }
 
 #progress {
@@ -54,9 +58,13 @@ a {
     display: none;
 }
 
+/* =================================
+   MAIN BUTTONS - ELECTRIC BLUE
+   ================================= */
+
 .btn {
-    background-color: #003263;
-    color: white;
+    background: linear-gradient(135deg, #064A91, #031B3A);
+    color: #FFFFFF;
     width: 227px;
     height: 46px;
     padding-bottom: 5px;
@@ -66,36 +74,116 @@ a {
     margin-bottom: 8px;
     margin-left: 5px;
     margin-right: 5px;
-    border-style: none;
-    transition-duration: 0.4s;
+    border: 1px solid rgba(0, 140, 255, 0.55);
+    transition: all 0.3s ease;
     cursor: pointer;
-    border-radius: 4px;
+    border-radius: 6px;
+    box-shadow: 0 0 8px rgba(0, 105, 255, 0.18);
 }
+
+/* Main button hover */
 
 .btn:hover {
-    background-color: #0069d9;
+    background: linear-gradient(135deg, #087CFF, #004DA6);
+    color: #FFFFFF;
+    border-color: #35A8FF;
+    box-shadow:
+        0 0 8px rgba(0, 124, 255, 0.7),
+        0 0 18px rgba(0, 124, 255, 0.35);
+    transform: translateY(-2px);
 }
 
+/* =================================
+   ONLINE BUTTONS - BLUE NEON
+   ================================= */
+
 .btn-onln {
-    background-color: #076300;
+    background: linear-gradient(135deg, #075EAA, #02345D);
+    border: 1px solid #008CFF;
+    color: #FFFFFF;
 }
 
 .btn-onln:hover {
-    background-color: #18891b;
+    background: linear-gradient(135deg, #00A6FF, #075EAA);
+    border-color: #64D5FF;
+    box-shadow:
+        0 0 10px rgba(0, 166, 255, 0.7),
+        0 0 20px rgba(0, 166, 255, 0.35);
 }
 
+/* =================================
+   TOOLBOX BUTTONS - ORANGE NEON
+   ================================= */
+
 .btn-toolbox {
-    background-color: #ae2301;
+    background: linear-gradient(135deg, #A63812, #5A1C0B);
+    border: 1px solid #FF6A1A;
+    color: #FFFFFF;
 }
 
 .btn-toolbox:hover {
-    background-color: #d42a01;
+    background: linear-gradient(135deg, #FF6A1A, #B83A0A);
+    border-color: #FFAD70;
+    box-shadow:
+        0 0 10px rgba(255, 106, 26, 0.7),
+        0 0 20px rgba(255, 106, 26, 0.35);
 }
 
+/* =================================
+   MULTI BUTTONS - GOLDEN NEON
+   ================================= */
+
 .btn-multi {
-    background-color: #b8860b;
+    background: linear-gradient(135deg, #986600, #533800);
+    border: 1px solid #FFC247;
+    color: #FFFFFF;
 }
 
 .btn-multi:hover {
-    background-color: #daa520;
+    background: linear-gradient(135deg, #FFC247, #986600);
+    color: #FFFFFF;
+    border-color: #FFE3A0;
+    box-shadow:
+        0 0 10px rgba(255, 194, 71, 0.7),
+        0 0 20px rgba(255, 194, 71, 0.35);
+}
+
+/* =================================
+   BUTTON PRESS EFFECT
+   ================================= */
+
+.btn:active {
+    transform: scale(0.97);
+    box-shadow: 0 0 5px rgba(0, 140, 255, 0.5);
+}
+
+/* =================================
+   MOBILE RESPONSIVE
+   ================================= */
+
+@media screen and (max-width: 480px) {
+    .btn {
+        width: 90%;
+        max-width: 320px;
+        height: 46px;
+        font-size: 18px;
+        margin: 7px auto;
+        display: block;
+    }
+}
+
+/* =================================
+   TEXT VISIBILITY
+   ================================= */
+
+button,
+input,
+select,
+textarea {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+::selection {
+    background: #087CFF;
+    color: #FFFFFF;
 }

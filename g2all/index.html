@@ -1,10 +1,17 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>PS4 [5.05] 7.00 - 13.52 FW GoldHEN Host by GamerHack</title>
-<link rel="stylesheet" href="../style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PS4 [5.05] 7.00 - 13.52 FW GoldHEN Host by Ammar Store</title>
+
+    <link rel="stylesheet" href="../style.css">
 </head>
+
 <body>
+
 <script>
 var uaFull = navigator.userAgent;
 var match = uaFull.match(/PlayStation 4[ /]([\d.]+)/i);
@@ -17,7 +24,7 @@ function onScriptError() {
 }
 
 if (!isPS4) {
-    document.addEventListener("DOMContentLoaded", () => {
+    document.addEventListener("DOMContentLoaded", function () {
         msgs.innerHTML = "Only for PS4 with Firmware 5.05 and 7.00 to 13.52";
     });
 } else {
@@ -33,8 +40,11 @@ if (!isPS4) {
         } else if (fwNum >= 11.50 && fwNum <= 13.52) {
             window.location.replace("cacheslopkit.html");
         } else {
-            document.addEventListener("DOMContentLoaded", () => {
-                msgs.innerHTML = 'Unsupported Firmware: <span style="color: red;">' + fwVersion + '</span>';
+            document.addEventListener("DOMContentLoaded", function () {
+                msgs.innerHTML =
+                    'Unsupported Firmware: <span style="color: red;">' +
+                    fwVersion +
+                    '</span>';
             });
         }
     } else {
@@ -43,22 +53,22 @@ if (!isPS4) {
             script.src = "505/exploit.js";
             script.onerror = onScriptError;
             document.head.appendChild(script);
-        }
-        else if (fwNum >= 7.00 && fwNum <= 8.52) {
+
+        } else if (fwNum >= 7.00 && fwNum <= 8.52) {
             var script = document.createElement('script');
             script.type = 'module';
             script.src = "700/alert.js";
             script.onerror = onScriptError;
             document.head.appendChild(script);
-        }
-        else if (fwNum >= 9.00 && fwNum <= 9.60) {
+
+        } else if (fwNum >= 9.00 && fwNum <= 9.60) {
             var script = document.createElement('script');
             script.type = 'module';
             script.src = "900/alert.js";
             script.onerror = onScriptError;
             document.head.appendChild(script);
-        }
-        else if (fwNum >= 10.00 && fwNum <= 11.02) {
+
+        } else if (fwNum >= 10.00 && fwNum <= 11.02) {
             var script = document.createElement('script');
             script.src = "css/main.js";
             script.onerror = onScriptError;
@@ -68,22 +78,22 @@ if (!isPS4) {
                 }, 500);
             };
             document.head.appendChild(script);
-        }
-        else if (fwNum >= 11.50 && fwNum <= 12.02) {
+
+        } else if (fwNum >= 11.50 && fwNum <= 12.02) {
             var script = document.createElement('script');
             script.type = 'module';
             script.src = "slopkit/chain_lapse.js";
             script.onerror = onScriptError;
             document.head.appendChild(script);
-        }
-        else if (fwNum >= 12.50 && fwNum <= 13.00) {
+
+        } else if (fwNum >= 12.50 && fwNum <= 13.00) {
             var script = document.createElement('script');
             script.type = 'module';
             script.src = "slopkit/chain_poops.js";
             script.onerror = onScriptError;
             document.head.appendChild(script);
-        }
-        else if (fwNum >= 13.02 && fwNum <= 13.52) {
+
+        } else if (fwNum >= 13.02 && fwNum <= 13.52) {
             var script = document.createElement('script');
             script.type = 'module';
             script.src = "slopkit/jb.js?v=19";
@@ -93,10 +103,15 @@ if (!isPS4) {
     }
 }
 </script>
-<h1>PS4 [5.05] 7.00 - 13.52 FW GoldHEN Host by GamerHack</h1>
+
+<h1>PS4 [5.05] 7.00 - 13.52 FW GoldHEN Host by Ammar Store</h1>
+
 <hr>
 <br>
-<h1 id=msgs style="font-size: 30px;margin-top: 77px;margin-bottom: 455px;">Loading GoldHEN v2.4b18.12... Please Wait</h1>
-<h1 style="margin-top: 43px;">Special Thanks to:<a href="https://twitter.com/_AlAzif" style="color: #f31414;margin-left: 10px;margin-right: 10px;">@_AlAzif</a>ChendoChap<a href="https://x.com/Kameleonre_" style="color: #f31414;margin-left: 10px;margin-right: 10px;">@Kameleonre_</a>SiSTR0 Abc</h1>
+
+<h1 id="msgs" style="font-size: 30px; margin-top: 77px; margin-bottom: 455px;">
+    Loading GoldHEN v2.4b18.12... Please Wait
+</h1>
+
 </body>
 </html>

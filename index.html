@@ -1,148 +1,115 @@
-
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>PS4 Exploit Host by Ammar Store</title>
+```
+<title>PS4 Exploit Host by Darkoona</title>
 
-    <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css">
 
-    <style>
-        html {
-            min-height: 100%;
-            background-color: #111;
-        }
+<style>
+    html {
+        min-height: 100%;
+        background-color: #111;
+    }
 
-        body {
-            min-height: 100vh;
-            margin: 0;
-            background-color: #111;
-            background-image: url("./background.png") !important;
-            background-size: cover !important;
-            background-position: center center !important;
-            background-repeat: no-repeat !important;
-            background-attachment: fixed !important;
-        }
+    body {
+        min-height: 100vh;
+        margin: 0;
 
+        background-color: #111;
+        background-image: url("./background.png") !important;
+        background-size: cover !important;
+        background-position: center center !important;
+        background-repeat: no-repeat !important;
+        background-attachment: fixed !important;
+
+        color: white;
+        font-family: Arial, sans-serif;
+    }
+
+    #msgs {
+        text-align: center;
+        padding: 15px 10px;
+    }
+
+    hr {
+        border: 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    #menu {
+        min-height: calc(100vh - 100px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .firmware-title {
+        font-size: 18px;
+        color: yellow;
+        margin-bottom: 25px;
+    }
+
+    .btn-multi {
+        margin: 0 auto;
+        cursor: pointer;
+    }
+
+    .brand {
+        color: #f31414;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .footer-title {
+        position: absolute;
+        bottom: 20px;
+        left: 0;
+        right: 0;
+        margin: 0;
+        padding: 10px;
+        font-size: 16px;
+        text-align: center;
+        line-height: 1.8;
+    }
+
+    @media (max-width: 600px) {
         #msgs {
-            text-align: center;
-        }
-
-        #menu {
-            text-align: center;
-        }
-
-        .brand {
-            color: #f31414;
-            margin-left: 10px;
-            margin-right: 10px;
+            font-size: 22px;
         }
 
         .footer-title {
-            margin-top: 78px;
+            font-size: 13px;
+            padding: 10px 15px;
+            box-sizing: border-box;
         }
-    </style>
+    }
+</style>
+```
+
 </head>
 
 <body>
 
-    <h1 id="msgs">PS4 Exploit Host by Ammar Store</h1>
+```
+<h1 id="msgs">PS4 Exploit Host by Darkoona</h1>
 
-    <hr>
-    <br>
+<hr>
 
-    <div id="menu">
+<div id="menu">
 
-        <h1 style="font-size: 18px; color: yellow;">
-            Select Your Firmware
-        </h1>
+    <h1 class="firmware-title">
+        Select Your Firmware
+    </h1>
 
-        <button
-            class="btn btn-multi"
-            onmouseover="setMessage('PS4 GoldHEN Host for 5.05 and 7.00 to 13.52 FW - Auto Exploit Selection')"
-            onmouseout="resetMessage()"
-            onclick="location.href='g2all/index.html'">
-            GoldHEN Multi FW
-        </button>
-
-        <button
-            class="btn"
-            onmouseover="setMessage('PS4 5.05 FW Host v2.5')"
-            onmouseout="resetMessage()"
-            onclick="location.href='505/index.html'">
-            5.05 FW v2.5
-        </button>
-
-        <a href="672goldhen/index.html">
-            <button
-                class="btn"
-                onmouseover="setMessage('PS4 6.72 FW GoldHEN Host')"
-                onmouseout="resetMessage()">
-                6.72 FW GoldHEN
-            </button>
-        </a>
-
-        <a href="672/index.html">
-            <button
-                class="btn"
-                onmouseover="setMessage('PS4 6.72 FW Host v3.0')"
-                onmouseout="resetMessage()">
-                6.72 FW v3.0
-            </button>
-        </a>
-
-        <br>
-
-        <a href="900goldhen/index.html">
-            <button
-                class="btn"
-                onmouseover="setMessage('PS4 9.00 FW GoldHEN Host - FontFaceSet Webkit')"
-                onmouseout="resetMessage()">
-                9.00 FW GoldHEN
-            </button>
-        </a>
-
-        <a href="900v3/index.html">
-            <button
-                class="btn"
-                onmouseover="setMessage('PS4 9.00 FW Host v3.0 - FontFaceSet Webkit')"
-                onmouseout="resetMessage()">
-                9.00 FW v3.0
-            </button>
-        </a>
-
-        <br>
-
-        <button
-            class="btn"
-            onmouseover="setMessage('Restore a Host to User Guide without using DNS')"
-            onmouseout="resetMessage()"
-            onclick="location.href='restore/index.html'">
-            Restore Host
-        </button>
-
-        <h1 class="footer-title">
-            Designed by:
-            <span class="brand">Ammar Store</span>
-            A special thanks to all the devs on the scene.
-        </h1>
-
-    </div>
-
-    <script>
-        const defaultTitle = 'PS4 Exploit Host by Ammar Store';
-        const msgs = document.getElementById('msgs');
-
-        function setMessage(message) {
-            msgs.textContent = message;
-        }
-
-        function resetMessage() {
-            msgs.textContent = defaultTitle;
-        }
-    </script>
-
-</body>
-</html>
+    <button
+        class="btn b
+```

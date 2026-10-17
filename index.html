@@ -19,14 +19,12 @@
     body {
         min-height: 100vh;
         margin: 0;
-
         background-color: #111;
         background-image: url("./background.png") !important;
         background-size: cover !important;
         background-position: center center !important;
         background-repeat: no-repeat !important;
         background-attachment: fixed !important;
-
         color: white;
         font-family: Arial, sans-serif;
     }
@@ -111,5 +109,33 @@
     </h1>
 
     <button
-        class="btn b
+        class="btn btn-multi"
+        onmouseover="setMessage('PS4 GoldHEN Host for 5.05 and 7.00 to 13.52 FW - Auto Exploit Selection')"
+        onmouseout="resetMessage()"
+        onclick="location.href='g2all/index.html'">
+        GoldHEN Multi FW
+    </button>
+
+</div>
+
+<h1 class="footer-title">
+    Designed by:
+    <span class="brand">Darkoona</span>
+</h1>
+
+<script>
+    const defaultTitle = 'PS4 Exploit Host by Darkoona';
+    const msgs = document.getElementById('msgs');
+
+    function setMessage(message) {
+        msgs.textContent = message;
+    }
+
+    function resetMessage() {
+        msgs.textContent = defaultTitle;
+    }
+</script>
 ```
+
+</body>
+</html>

@@ -1,141 +1,165 @@
 <!DOCTYPE html>
-
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-```
-<title>PS4 Exploit Host by Darkoona</title>
+    <title>PS4 Exploit Host by Darkoona</title>
 
-<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
 
-<style>
-    html {
-        min-height: 100%;
-        background-color: #111;
-    }
-
-    body {
-        min-height: 100vh;
-        margin: 0;
-        background-color: #111;
-        background-image: url("./background.png") !important;
-        background-size: cover !important;
-        background-position: center center !important;
-        background-repeat: no-repeat !important;
-        background-attachment: fixed !important;
-        color: white;
-        font-family: Arial, sans-serif;
-    }
-
-    #msgs {
-        text-align: center;
-        padding: 15px 10px;
-    }
-
-    hr {
-        border: 0;
-        border-top: 1px solid rgba(255, 255, 255, 0.3);
-    }
-
-    #menu {
-        min-height: calc(100vh - 100px);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        padding: 20px;
-        box-sizing: border-box;
-    }
-
-    .firmware-title {
-        font-size: 18px;
-        color: yellow;
-        margin-bottom: 25px;
-    }
-
-    .btn-multi {
-        margin: 0 auto;
-        cursor: pointer;
-    }
-
-    .brand {
-        color: #f31414;
-        margin-left: 10px;
-        margin-right: 10px;
-    }
-
-    .footer-title {
-        position: absolute;
-        bottom: 20px;
-        left: 0;
-        right: 0;
-        margin: 0;
-        padding: 10px;
-        font-size: 16px;
-        text-align: center;
-        line-height: 1.8;
-    }
-
-    @media (max-width: 600px) {
-        #msgs {
-            font-size: 22px;
+    <style>
+        html {
+            min-height: 100%;
+            background-color: #111;
         }
 
-        .footer-title {
-            font-size: 13px;
-            padding: 10px 15px;
+        body {
+            min-height: 100vh;
+            margin: 0;
+
+            background-color: #111;
+            background-image: url("./background.png") !important;
+            background-size: cover !important;
+            background-position: center center !important;
+            background-repeat: no-repeat !important;
+            background-attachment: fixed !important;
+
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Main title */
+        #msgs {
+            text-align: center;
+            margin: 0;
+            padding: 10px;
+            font-size: 26px;
+            line-height: 1.4;
+        }
+
+        /* White separator line */
+        hr {
+            border: 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.4);
+            margin: 20px 0 0;
+        }
+
+        /* Firmware menu directly below the line */
+        #menu {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            text-align: center;
+
+            min-height: auto;
+            padding: 10px 10px;
             box-sizing: border-box;
         }
-    }
-</style>
-```
 
+        /* Firmware heading */
+        .firmware-title {
+            font-size: 18px;
+            color: yellow;
+            margin: 0 0 25px;
+        }
+
+        /* Multi FW button */
+        .btn-multi {
+            margin: 0 auto;
+            cursor: pointer;
+        }
+
+        /* Footer credit */
+        .footer-title {
+            position: fixed;
+            bottom: 10px;
+            left: 0;
+            right: 0;
+
+            margin: 0;
+            padding: 10px;
+
+            font-size: 16px;
+            text-align: center;
+            line-height: 1.5;
+            box-sizing: border-box;
+        }
+
+        /* Darkoona brand */
+        .brand {
+            color: #00bfff;
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+
+        /* Mobile and small screens */
+        @media (max-width: 600px) {
+            #msgs {
+                font-size: 22px;
+            }
+
+            .firmware-title {
+                font-size: 18px;
+                margin-bottom: 25px;
+            }
+
+            .footer-title {
+                font-size: 14px;
+                padding: 8px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-```
-<h1 id="msgs">PS4 Exploit Host by Darkoona</h1>
+    <!-- Page title -->
+    <h1 id="msgs">PS4 Exploit Host by Darkoona</h1>
 
-<hr>
+    <!-- White separator -->
+    <hr>
 
-<div id="menu">
+    <!-- Firmware menu -->
+    <div id="menu">
 
-    <h1 class="firmware-title">
-        Select Your Firmware
+        <h1 class="firmware-title">
+            Select Your Firmware
+        </h1>
+
+        <button
+            class="btn btn-multi"
+            onclick="location.href='g2all/index.html'"
+            onmouseover="setMessage('PS4 GoldHEN Host for 5.05 and 7.00 to 13.52 FW - Auto Exploit Selection')"
+            onmouseout="resetMessage()">
+
+            GoldHEN Multi FW
+
+        </button>
+
+    </div>
+
+    <!-- Footer -->
+    <h1 class="footer-title">
+        Designed by:
+        <span class="brand">Darkoona</span>
     </h1>
 
-    <button
-        class="btn btn-multi"
-        onmouseover="setMessage('PS4 GoldHEN Host for 5.05 and 7.00 to 13.52 FW - Auto Exploit Selection')"
-        onmouseout="resetMessage()"
-        onclick="location.href='g2all/index.html'">
-        GoldHEN Multi FW
-    </button>
+    <script>
+        const defaultTitle = 'PS4 Exploit Host by Darkoona';
+        const msgs = document.getElementById('msgs');
 
-</div>
+        function setMessage(message) {
+            msgs.textContent = message;
+        }
 
-<h1 class="footer-title">
-    Designed by:
-    <span class="brand">Darkoona</span>
-</h1>
-
-<script>
-    const defaultTitle = 'PS4 Exploit Host by Darkoona';
-    const msgs = document.getElementById('msgs');
-
-    function setMessage(message) {
-        msgs.textContent = message;
-    }
-
-    function resetMessage() {
-        msgs.textContent = defaultTitle;
-    }
-</script>
-```
+        function resetMessage() {
+            msgs.textContent = defaultTitle;
+        }
+    </script>
 
 </body>
+
 </html>
